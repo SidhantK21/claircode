@@ -22,13 +22,9 @@ export const Footer = () => {
       ];
 
   return (
-    <div className="w-full border-t mt-16">
-      <footer className="max-w-7xl mx-auto px-4 py-4 grid grid-cols-1 sm:grid-cols-3 gap-8 text-neutral-600">
-        {/* Reserved space for future footer sections */}
-      </footer>
-
+    <div className="w-full border-t ">
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between px-4 py-4">
-        <div className="flex flex-col items-start">
+        <div className="flex flex-col md:items-start items-center">
 
           <motion.h2
           initial={{opacity:0,y:20}}
