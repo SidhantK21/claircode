@@ -3,20 +3,14 @@
 import { motion, useMotionValueEvent, useScroll, useTransform } from "framer-motion";
 import { useState } from "react";
 import Link from "next/link";
-import {
-  User,
-  FolderKanban,
-  Mail,
-  PenLine,
-  LayoutDashboard,
-} from "lucide-react"; 
+
 
 export const Navbar = () => {
   const navItems = [
-    { title: "About", href: "/about", icon: <User size={16} /> },
-    { title: "Projects", href: "/projects", icon: <FolderKanban size={16} /> },
-    { title: "Contact", href: "/contact", icon: <Mail size={16} /> },
-    { title: "Blog", href: "/blog", icon: <PenLine size={16} /> },
+    { title: "About", href: "/about" },
+    { title: "Projects", href: "/projects"  },
+    { title: "Contact", href: "/contact"},
+    { title: "Blog", href: "/blog" },
   ];
 
   const [hovered, setHovered] = useState<number | null>(null);
@@ -40,10 +34,10 @@ export const Navbar = () => {
                    backdrop-blur-3xl
                    shadow-md rounded-md border border-neutral-200 "
       >
-        {/* Left icon/logo */}
-        <div className="flex items-center gap-2 text-black font-semibold text-sm sm:text-base">
-          <LayoutDashboard size={20} />
-          <span>YourLogo</span>
+
+        <div className="flex items-center gap-2 font-semibold text-sm sm:text-base">
+          {/* <LayoutDashboard size={20} /> */}
+          <span className="text-xl bg-gradient-to-br from-emerald-400 via-emerald-500 to-emerald-600 bg-clip-text text-transparent tracking-tighter">claircode</span>
         </div>
 
         {/* Right nav items */}
@@ -63,7 +57,6 @@ export const Navbar = () => {
                 />
               )}
               <span className="relative z-10 flex items-center gap-1">
-                {item.icon}
                 {item.title}
               </span>
             </Link>
