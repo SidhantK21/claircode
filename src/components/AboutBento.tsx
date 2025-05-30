@@ -32,7 +32,7 @@ export const About = () => {
         transition={{ duration: 0.5 }}
         className="mb-10 max-w-6xl mx-auto">
             <h2 className="lg:text-5xl font-bold text-neutral-700 rowdies-bold tracking-tight ">Glimpse of offerings</h2>
-            <p className="text-neutral-600 mt-2">From AI automation to responsive UI/UX — tailored solutions for modern businesses.</p>
+            <p className="text-neutral-600 mt-2">From AI automation to responsive UI/UX — tailored solutions for modern businesses</p>
             </motion.div>
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-2">
           

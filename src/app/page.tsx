@@ -2,7 +2,7 @@
 import { About } from "@/components/AboutBento";
 import { Container } from "@/components/container";
 import { Hero } from "@/components/Hero";
-import { Services } from "@/components/Services";
+import { Pricing } from "@/components/pricing";
 import UserStatsCard from "@/components/userProgess";
 import Image from "next/image";
 
@@ -11,7 +11,7 @@ export default function Home() {
    <Container className="" >
     <Hero/>
     <About/>
-    <Services/>
+    <Pricing/>
    </Container>
   );
 }
