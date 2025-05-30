@@ -30,7 +30,7 @@ export const Footer = () => {
           initial={{opacity:0,y:20}}
           animate={{opacity:1,y:0}}
           transition={{delay:0.3}}
-          className="rowdies-bold text-3xl font-bold tracking-tighter bg-gradient-to-br from-emerald-400 via-emerald-500 to-emerald-600 bg-clip-text text-transparent">
+          className="rowdies-bold text-3xl font-bold tracking-tight bg-gradient-to-br from-emerald-400 via-emerald-500 to-emerald-600 bg-clip-text text-transparent">
             claircode
           </motion.h2>
           <p className="text-xs text-neutral-400 mt-1">

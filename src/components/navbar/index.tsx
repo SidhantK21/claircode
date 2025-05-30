@@ -37,7 +37,7 @@ export const Navbar = () => {
 
         <div className="flex items-center gap-2 font-semibold text-sm sm:text-base">
           {/* <LayoutDashboard size={20} /> */}
-          <span className="text-xl bg-gradient-to-br from-emerald-400 via-emerald-500 to-emerald-600 bg-clip-text text-transparent tracking-tighter">claircode</span>
+          <Link href={"/"} className="cursor-pointer text-xl bg-gradient-to-br from-emerald-400 via-emerald-500 to-emerald-600 bg-clip-text text-transparent tracking-tight">claircode</Link>
         </div>
 
         {/* Right nav items */}
