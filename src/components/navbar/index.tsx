@@ -25,7 +25,7 @@ export const Navbar = () => {
   const scale = useTransform(scrollY, [0, 100], [1, 0.98]);
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 pointer-events-none">
+    <div className="fixed mt-1 top-0 left-0 right-0 z-50 pointer-events-none">
       <motion.nav
         style={{ y, maxWidth, scale }}
         transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
@@ -35,7 +35,7 @@ export const Navbar = () => {
           backdrop-blur-3xl
           transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]
           pointer-events-auto
-          ${scrolled ? "rounded-full border border-neutral-200 bg-white/80 shadow-md" : "rounded-md bg-white/0 border-transparent shadow-none"}
+          ${scrolled ? "rounded-full border border-neutral-200 backdrop-blur-2xl " : "rounded-md bg-white/0 border-transparent shadow-none"}
         `}
       >
         {/* Logo */}
@@ -48,26 +48,31 @@ export const Navbar = () => {
           </Link>
         </div>
 
-        {/* Nav Links */}
-        <div className="flex items-center gap-2 sm:gap-3">
-          {navItems.map((item, idx) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              onMouseEnter={() => setHovered(idx)}
-              onMouseLeave={() => setHovered(null)}
-              className="relative text-xs sm:text-sm px-2 py-1.5 flex items-center gap-1 text-neutral-500 font-medium transition-colors hover:text-black"
-            >
-              {hovered === idx && (
-                <motion.span
-                  layoutId="hovered-span"
-                  className="absolute inset-0 rounded-md"
-                  transition={{ type: "spring", stiffness: 350, damping: 30 }}
-                />
-              )}
-              <span className="relative z-10 flex items-center gap-1">{item.title}</span>
-            </Link>
-          ))}
+        {/* Center Nav Items */}
+        <div className="flex-1 flex justify-center">
+          <div className="flex items-center gap-2 sm:gap-3">
+            {navItems.map((item, idx) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                onMouseEnter={() => setHovered(idx)}
+                onMouseLeave={() => setHovered(null)}
+                className="relative text-xs sm:text-sm px-2 py-1.5 flex items-center gap-1 text-neutral-500 font-medium transition-colors hover:text-black"
+              >
+                <span className="relative z-10 font-semibold text-neutral-700 hover:text-neutral-900 flex items-center gap-1">{item.title}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Login Button */}
+        <div>
+          <Link
+            href="/login"
+            className=" sm:text-sm px-3 py-1.5 rounded-md font-bold bg-gradient-to-br from-emerald-400 via-emerald-500 to-emerald-600 text-white hover:bg-neutral-700 transition-colors text-base "
+          >
+            Login
+          </Link>
         </div>
       </motion.nav>
     </div>

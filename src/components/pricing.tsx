@@ -7,14 +7,16 @@ export const Pricing = () => {
     "Good for personal brands",
     "Includes 3 round revision",
     "Custom animations",
-    "Mobile-Optimized"
+    "Mobile-Optimized",
+    "1 month support after launch"
   ];
 
   const LongRun = [
     "SEO optimization",
     "Monthly website maintenance",
     "Overall Optimization",
-    "Google ranking improvements"
+    "Google ranking improvements",
+    "AI Automation"
   ];
 
   const TickIcon = () => (
@@ -49,7 +51,7 @@ export const Pricing = () => {
         {/* Plan Card 1 */}
         <div className="w-full lg:w-1/2 border border-gray-200 rounded-xl bg-white p-6 flex flex-col justify-between">
           <div>
-            <h2 className="text-2xl font-semibold mb-4 text-neutral-800">Custom Web Solutions</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-neutral-800">Small-Step</h2>
             <ul className="space-y-3">
               {Kickoff.map((item, idx) => (
                 <li key={idx} className="flex items-center gap-2 text-neutral-700 text-base">
