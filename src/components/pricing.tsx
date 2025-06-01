@@ -32,61 +32,91 @@ export const Pricing = () => {
   );
 
   return (
-    <div className="w-full min-h-screen flex flex-col justify-center gap-8">
+    <div className="w-full min-h-screen flex flex-col justify-center gap-6 sm:gap-8 px-4 sm:px-6 py-8 sm:py-12">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="w-full mb-5  max-w-6xl mx-auto"
+        className="w-full mb-3 sm:mb-5 max-w-6xl mx-auto"
       >
-        <h2 className="lg:text-5xl font-bold text-neutral-700 rowdies-bold tracking-tight">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-700 rowdies-bold tracking-tight">
           Services at minimal cost
         </h2>
-        <p className="text-neutral-600 mt-2">
+        <p className="text-neutral-600 mt-2 text-sm sm:text-base">
           We offer two plans and prices are negotiable according to the requirements
         </p>
       </motion.div>
 
-      <div className="w-full max-w-6xl flex flex-col lg:flex-row mx-auto gap-2">
+      <div className="w-full max-w-6xl flex flex-col lg:flex-row mx-auto gap-4 sm:gap-6 lg:gap-2">
         {/* Plan Card 1 */}
-        <div className="w-full lg:w-1/2 border border-gray-200 rounded-xl bg-white p-6 flex flex-col justify-between">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="w-full lg:w-1/2 border border-gray-200 rounded-xl bg-white p-4 sm:p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300"
+        >
           <div>
-            <h2 className="text-2xl font-semibold mb-4 text-neutral-800">Small-Step</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold mb-4 text-neutral-800">Small-Step</h2>
             <ul className="space-y-3">
               {Kickoff.map((item, idx) => (
-                <li key={idx} className="flex items-center gap-2 text-neutral-700 text-base">
+                <motion.li
+                  key={idx}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.3, delay: 0.2 + idx * 0.1 }}
+                  className="flex items-start gap-3 text-neutral-700 text-sm sm:text-base"
+                >
                   <TickIcon />
-                  <span>{item}</span>
-                </li>
+                  <span className="leading-relaxed">{item}</span>
+                </motion.li>
               ))}
             </ul>
           </div>
           <div className="mt-6">
-            <button className="bg-gradient-to-br from-emerald-500 via-emerald-600 to-emerald-700 text-white px-5 py-2 rounded-lg font-bold ">
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="w-full sm:w-auto bg-gradient-to-br from-emerald-500 via-emerald-600 to-emerald-700 text-white px-6 py-3 rounded-lg font-bold hover:shadow-lg transition-shadow duration-300"
+            >
               Get Quote
-            </button>
+            </motion.button>
           </div>
-        </div>
+        </motion.div>
 
         {/* Plan Card 2 */}
-        <div className="w-full lg:w-1/2 border border-gray-200 rounded-xl bg-white p-6 flex flex-col justify-between">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="w-full lg:w-1/2 border border-gray-200 rounded-xl bg-white p-4 sm:p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300"
+        >
           <div>
-            <h2 className="text-2xl font-semibold mb-4 text-neutral-700">Long-Run</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold mb-4 text-neutral-700">Long-Run</h2>
             <ul className="space-y-3">
               {LongRun.map((item, idx) => (
-                <li key={idx} className="flex items-center gap-2 text-neutral-700 text-base">
+                <motion.li
+                  key={idx}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.3, delay: 0.3 + idx * 0.1 }}
+                  className="flex items-start gap-3 text-neutral-700 text-sm sm:text-base"
+                >
                   <TickIcon />
-                  <span>{item}</span>
-                </li>
+                  <span className="leading-relaxed">{item}</span>
+                </motion.li>
               ))}
             </ul>
           </div>
           <div className="mt-6">
-            <button className="bg-gradient-to-br from-emerald-500 via-emerald-600 to-emerald-700 text-white px-5 py-2 rounded-lg font-bold">
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="w-full sm:w-auto bg-gradient-to-br from-emerald-500 via-emerald-600 to-emerald-700 text-white px-6 py-3 rounded-lg font-bold hover:shadow-lg transition-shadow duration-300"
+            >
               View Portfolio
-            </button>
+            </motion.button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
