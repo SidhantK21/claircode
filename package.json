@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@calcom/embed-react": "^1.5.3",
     "@tabler/icons-react": "^3.33.0",
     "apexcharts": "^4.7.0",
     "clsx": "^2.1.1",

@@ -99,7 +99,7 @@ export const Navbar = () => {
         {/* Login Button */}
         <div className="hidden sm:block">
           <Link
-            href="/login"
+            href="/meeting"
             className="text-sm px-3 py-1.5 rounded-md font-bold bg-gradient-to-br from-emerald-400 via-emerald-500 to-emerald-600 text-white hover:bg-neutral-700 transition-colors"
           >
             Call
