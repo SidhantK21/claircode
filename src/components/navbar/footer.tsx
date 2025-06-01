@@ -22,7 +22,7 @@ export const Footer = () => {
       ];
 
   return (
-    <div className="w-full border-t border-neutral-300 ">
+    <div className="w-full border-neutral-300 ">
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between px-4 py-4">
         <div className="flex flex-col md:items-start items-center">
 

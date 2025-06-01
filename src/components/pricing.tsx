@@ -53,7 +53,7 @@ export const Pricing = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="w-full lg:w-1/2 border border-gray-200 rounded-xl bg-white p-4 sm:p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300"
+          className="w-full lg:w-1/2 border border-gray-200 rounded-xl bg-white p-4 sm:p-6 flex flex-col justify-between "
         >
           <div>
             <h2 className="text-xl sm:text-2xl font-semibold mb-4 text-neutral-800">Small-Step</h2>
@@ -88,7 +88,7 @@ export const Pricing = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="w-full lg:w-1/2 border border-gray-200 rounded-xl bg-white p-4 sm:p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300"
+          className="w-full lg:w-1/2 border border-gray-200 rounded-xl bg-white p-4 sm:p-6 flex flex-col justify-between s"
         >
           <div>
             <h2 className="text-xl sm:text-2xl font-semibold mb-4 text-neutral-700">Long-Run</h2>
