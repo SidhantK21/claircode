@@ -59,14 +59,14 @@ export const Projects = () => {
   return (
     <div className="w-full min-h-screen bg-white py-10 sm:py-12 md:py-16 lg:py-5">
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-5 md:px-6 lg:px-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-14 md:px-6 lg:px-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="mb-6 sm:mb-8 md:mb-10"
         >
-          <div className="inline-block">
+          <div className="inline-block ml-1">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-700 mb-2 sm:mb-2 tracking-tight">
               Previous Work
             </h2>
@@ -132,7 +132,7 @@ export const Projects = () => {
                   </div>
                 </div>
               </div>
-
+                      
             </motion.div>
           ))}
         </div>

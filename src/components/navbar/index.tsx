@@ -55,11 +55,11 @@ export const Navbar = () => {
           transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]
           pointer-events-auto
           ${scrolled
-            ? "rounded-full border border-neutral-200 backdrop-blur-2xl"
+            ? "rounded-full shadow-custom backdrop-blur-2xl"
             : "rounded-md bg-white/0 border-transparent shadow-none"}
         `}
       >
-        {/* Logo */}
+      
         <Link
           href="/"
           className="text-xl bg-gradient-to-br from-emerald-400 via-emerald-500 to-emerald-600 bg-clip-text text-transparent font-semibold tracking-tight"
@@ -67,7 +67,7 @@ export const Navbar = () => {
           claircode
         </Link>
 
-        {/* Desktop Nav */}
+
         <div className="hidden sm:flex flex-1 justify-center">
           <div className="flex items-center gap-3">
             {navItems.map((item, idx) => (
@@ -86,7 +86,6 @@ export const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Menu Toggle */}
         <div className="sm:hidden flex items-center">
           <button
             className="text-neutral-700"
@@ -96,24 +95,22 @@ export const Navbar = () => {
           </button>
         </div>
 
-        {/* Login Button */}
         <div className="hidden sm:block">
           <Link
             href="/meeting"
-            className="text-sm px-3 py-1.5 rounded-md font-bold bg-gradient-to-br from-emerald-400 via-emerald-500 to-emerald-600 text-white hover:bg-neutral-700 transition-colors"
+            className="text-sm px-3 py-1.5 rounded-md font-bold border border-emerald-700/50 bg-gradient-to-br from-emerald-400 via-emerald-500 to-emerald-600 text-white "
           >
             Call
           </Link>
         </div>
       </motion.nav>
 
-      {/* Mobile Nav Dropdown */}
       {menuOpen && (
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
-          className="sm:hidden mt-2 mx-4 rounded-lg bg-white shadow-lg border border-neutral-200 p-4 z-40"
+          className="sm:hidden mt-4 mx-4 rounded-lg bg-white shadow-lg border border-neutral-200 p-4 z-40"
         >
           <div className="flex flex-col space-y-2">
             {navItems.map((item) => (

@@ -25,13 +25,13 @@ export const About = () => {
 
     return (
 
-      <div className="w-full min-h-screen p-4 sm:p-6">
+      <div className="w-full min-h-screen p-4 sm:p-16">
         <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         className="mb-6 sm:mb-10 max-w-6xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-700 rowdies-bold tracking-tight">Glimpse of offerings</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-700 mb-2 sm:mb-2 tracking-tight">Glimpse of offerings</h2>
             <p className="text-neutral-600 mt-2 text-sm sm:text-base">From AI automation to responsive UI/UX — tailored solutions for modern businesses</p>
         </motion.div>
 

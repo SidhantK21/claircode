@@ -13,30 +13,35 @@ export const FAQ = () => {
 
   const faqs = [
     {
-      question: "Why should I start writing on this platform?",
-      answer: "Our platform offers a clean, distraction-free environment that puts your content front and center. With our minimalist black and white design, readers can focus entirely on your ideas and storytelling without visual noise. We also provide powerful tools for writers, a supportive community, and extensive reach to help your voice be heard."
+      question: "How much time does it take to complete a project?",
+      answer:
+        "Generally, it takes around 7 days to build a landing page from scratch, including custom UI/UX design, development, and hosting. The overall timeline depends on the complexity of the project."
     },
     {
-      question: "What makes this blogging platform different?",
-      answer: "Unlike other platforms cluttered with advertisements and distracting elements, our black and white theme creates a premium reading experience similar to traditional print media. This elegant simplicity not only enhances readability but also gives your work a timeless, professional appearance that stands out in today's colorful digital landscape."
+      question: "What makes us different from others?",
+      answer:
+        "We offer custom designs with smooth, tasteful animations and an enhanced user experience that effectively attracts and retains users."
     },
     {
-      question: "Can I customize my blog while maintaining the theme?",
-      answer: "Absolutely! While we maintain the sophisticated black and white aesthetic across the platform, you have numerous customization options including typography choices, layout preferences, and subtle design elements. This allows you to express your unique voice while benefiting from our refined, reader-focused design philosophy."
+      question: "Is the pricing flexible?",
+      answer:
+        "Yes! Our pricing is flexible. We strive to keep costs as low as possible without compromising on quality."
     },
     {
-      question: "Will my content reach a wider audience?",
-      answer: "Yes! Our platform is optimized for discoverability. The clean black and white design improves readability and engagement metrics, which boosts your content in search rankings. Additionally, we have a built-in network of dedicated readers who appreciate thoughtful content presented in our distinctive, distraction-free style."
+      question: "Will my website reach a wider audience?",
+      answer:
+        "Absolutely! We implement SEO optimization to help your website rank higher on Google and reach a broader audience."
     },
     {
-      question: "How does the minimalist design benefit my writing?",
-      answer: "Our black and white theme eliminates visual distractions, allowing readers to fully immerse themselves in your words. Research shows that high-contrast, clean designs improve reading comprehension and retention. This means your ideas will be better understood and remembered. The elegant simplicity also conveys professionalism and trustworthiness, enhancing your credibility as a writer."
+      question: "What additional benefits will I get?",
+      answer:
+        "We provide AI automation tools that give you an extra edge over the competition."
     }
   ];
-
+  
   return (
     <div className="w-full bg-white  sm:py-16 md:py-20 lg:p-1">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16">
+      <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-16">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

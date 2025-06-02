@@ -32,14 +32,14 @@ export const Pricing = () => {
   );
 
   return (
-    <div className="w-full min-h-screen flex flex-col justify-center gap-6 sm:gap-8 px-4 sm:px-6 py-8 sm:py-12">
+    <div className="w-full min-h-screen flex flex-col justify-center gap-6 sm:gap-8 px-4 sm:px-16 py-8 sm:py-12">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         className="w-full mb-3 sm:mb-5 max-w-6xl mx-auto"
       >
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-700 rowdies-bold tracking-tight">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-700 mb-2 sm:mb-2 tracking-tight">
           Services at minimal cost
         </h2>
         <p className="text-neutral-600 mt-2 text-sm sm:text-base">
@@ -76,7 +76,7 @@ export const Pricing = () => {
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="w-full sm:w-auto bg-gradient-to-br from-emerald-500 via-emerald-600 to-emerald-700 text-white px-6 py-3 rounded-lg font-bold hover:shadow-lg transition-shadow duration-300"
+              className="w-full sm:w-auto border border-emerald-700/50 bg-gradient-to-br from-emerald-500 via-emerald-600 to-emerald-700 text-white px-6 py-3 rounded-lg font-bold hover:shadow-lg transition-shadow duration-300"
             >
               Get Quote
             </motion.button>
@@ -111,7 +111,7 @@ export const Pricing = () => {
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="w-full sm:w-auto bg-gradient-to-br from-emerald-500 via-emerald-600 to-emerald-700 text-white px-6 py-3 rounded-lg font-bold hover:shadow-lg transition-shadow duration-300"
+              className="w-full sm:w-auto border border-emerald-700/50 bg-gradient-to-br from-emerald-500 via-emerald-600 to-emerald-700 text-white px-6 py-3 rounded-lg font-bold hover:shadow-lg transition-shadow duration-300"
             >
               View Portfolio
             </motion.button>
