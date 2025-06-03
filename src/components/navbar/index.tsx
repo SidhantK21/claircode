@@ -34,6 +34,9 @@ export const Navbar = () => {
     setScrolled(latest > 30);
   });
 
+   
+
+
   const y = useTransform(scrollY, [0, 100], [0, 12]);
   const maxWidth = useTransform(scrollY, [0, 100], ["80%", "60%"]);
   const maxWidthS = useTransform(scrollY, [0, 100], ["100%", "90%"]);
@@ -62,7 +65,7 @@ export const Navbar = () => {
       
         <Link
           href="/"
-          className="text-xl bg-gradient-to-br from-emerald-400 via-emerald-500 to-emerald-600 bg-clip-text text-transparent font-semibold tracking-tight"
+          className="text-xl  bg-gradient-to-br from-emerald-400 via-emerald-500 to-emerald-600 bg-clip-text text-transparent font-semibold tracking-tight"
         >
           claircode
         </Link>

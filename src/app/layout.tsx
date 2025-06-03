@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/navbar/footer";
+import { ViewTransitions } from "next-view-transitions";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,6 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <ViewTransitions>
       <html lang="en" suppressHydrationWarning>
         <body
           className={`antialiased `}
@@ -35,5 +38,7 @@ export default function RootLayout({
             <Footer/>
         </body>
       </html>
+      </ViewTransitions>
+
   );
 }
