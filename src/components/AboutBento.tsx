@@ -1,6 +1,5 @@
 "use client"
 
-import { Award, Brain, Code, Database, Globe, Heart, Target, Users, Zap } from "lucide-react"
 import UserStatsCard from "./userProgess"
 import { motion } from "motion/react";
 import { IconBellOff } from '@tabler/icons-react';
