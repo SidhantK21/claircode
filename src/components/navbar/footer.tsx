@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import Link from "next/link";
 import {  IconBrandGithub, IconBrandInstagram, IconBrandX } from "@tabler/icons-react";
