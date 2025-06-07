@@ -1,4 +1,3 @@
-// import { About } from "@/components/AboutBento";
 import { About } from "@/components/AboutBento";
 import { Container } from "@/components/container";
 import FAQ from "@/components/FAQ";
