@@ -9,6 +9,7 @@ import {
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
+// import { useRouter } from "next/navigation";
 
 export const Navbar = () => {
   const navItems = [
@@ -17,6 +18,13 @@ export const Navbar = () => {
     { title: "Contact", href: "/contact" },
   ];
 
+
+  // const router=useRouter();
+
+  // const handleRoute=()=>{
+  //   router.push('/contact')
+  // }
+  
   const [, setHovered] = useState<number | null>(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const { scrollY } = useScroll();
@@ -43,7 +51,7 @@ export const Navbar = () => {
   const scale = useTransform(scrollY, [0, 100], [1, 0.98]);
 
   return (
-    <div className="fixed mt-1 top-0 left-0 right-0 z-50 pointer-events-none">
+    <div className="fixed mt-1 top-0 left-0 right-0 z-50 pointer-events-auto">
       <motion.nav
         style={{
           y,
@@ -113,25 +121,26 @@ export const Navbar = () => {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
-          className="sm:hidden mt-4 mx-4 rounded-lg bg-white shadow-lg border border-neutral-200 p-4 z-40"
+          className="sm:hidden mt-4 mx-4 rounded-lg backdrop-blur-2xl border border-neutral-300 p-4 z-40"
         >
           <div className="flex flex-col space-y-2">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-neutral-700 font-medium hover:text-black"
+                className="text-neutral-700 font-medium border border-neutral-200 rounded-sm p-2 hover:text-black"
                 onClick={() => setMenuOpen(false)}
               >
                 {item.title}
               </Link>
             ))}
             <Link
-              href="/login"
-              className="mt-2 text-center px-3 py-2 rounded-md font-bold bg-gradient-to-br from-emerald-400 via-emerald-500 to-emerald-600 text-white"
-              onClick={() => setMenuOpen(false)}
+              href="/meeting"
+              className="mt-2 text-center px-3 py-2 rounded-md font-bold bg-gradient-to-br from-emerald-500 via-emerald-600 to-emerald-700 border border-emerald-700/80 text-white"
+              onClick={() => {
+                setMenuOpen(false);}}
             >
-              Login
+              Contact 
             </Link>
           </div>
         </motion.div>

@@ -4,8 +4,15 @@ import { cn } from "@/libs/utils";
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import Marquee from "react-fast-marquee";
+import  { useRouter } from "next/navigation";
 
 export const Hero = () => {
+
+  const router = useRouter(); 
+
+  const handleCTA =()=>{
+    router.push("/meeting");
+  }
   const words: string[] = ["perform", "impress", "convert", "dominate"];
   const [index, setIndex] = useState(0);
   const [isHovered, setIsHovered] = useState<boolean | false>(false);
@@ -70,6 +77,7 @@ export const Hero = () => {
 
         {/* CTA Button */}
         <motion.button 
+        onClick={handleCTA}
           className="mt-10 relative w-52 h-12 rounded-xl overflow-hidden group"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
