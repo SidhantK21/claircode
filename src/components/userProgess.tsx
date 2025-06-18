@@ -35,7 +35,7 @@ export const UserStatsCard = () => {
             className="text-sm font-medium text-gray-500 hover:text-gray-900 inline-flex items-center gap-1 transition-colors"
             type="button"
           >
-            Growth Guarantee
+            Growth Guaranteed
           </button>
           <span className="text-xs text-gray-400">Updated just now</span>
         </div>
